@@ -1,7 +1,7 @@
 package clases;
 import clases.Usuario;
 
-public class clculadoraIMC {
+public class  clculadoraIMC {
     //THE RESPONSABILITY OF THIS CLASS IS CALCULATE THE IMC
 
     //METODOS

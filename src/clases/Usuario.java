@@ -5,7 +5,7 @@ public class Usuario {
     private int userWeight;
     private int userAge;
     private String userName;
-    private String sex;
+    private double Usersex;
     private double userHeight;
     private double userWaist;
     private double userHip;
@@ -25,8 +25,8 @@ public class Usuario {
     public String getUserName(){
         return userName;
     }
-    public String getSex(){
-        return sex;
+    public double getUserSex(){
+        return Usersex;
     }
     public double getUserHeight(){
         return userHeight;
@@ -45,11 +45,11 @@ public class Usuario {
 
     //Metodos
         //Constructor
-    public Usuario(int idNum, String userName, String sex, int userAge, int userWeight, double userHeight, double userWaist, double userHip){
+    public Usuario(int idNum, String userName, double sex, int userAge, int userWeight, double userHeight, double userWaist, double userHip){
         this.idNum = idNum;
         this.userName = userName;
         this.userAge = userAge;
-        this.sex = sex;
+        this.Usersex = sex;
         this.userHip = userHip;
         this.userWaist = userWaist;
         this.userWeight = userWeight;
@@ -57,6 +57,6 @@ public class Usuario {
     }
 
     public String info(){
-        return "\nEl nombre del usuario es: " + getUserName() + "\nSu edad es: " + getUserAge() + "\nSu sexo es: " + getSex() + "\nEl peso del usuario es: " + getUserWeight() + "kg" + "\nLa altura del usuario es: " + getUserHeight() + "\nEl diametro de la cintura es: " + getUserWaist() + "cm" + "\nY el diametro de la cadera es: " + getUserHip() + "cm";
+        return "\nEl nombre del usuario es: " + getUserName() + "\nSu edad es: " + getUserAge() + "\nSu sexo es: " + getUserSex() + "\nEl peso del usuario es: " + getUserWeight() + "kg" + "\nLa altura del usuario es: " + getUserHeight() + "\nEl diametro de la cintura es: " + getUserWaist() + "cm" + "\nY el diametro de la cadera es: " + getUserHip() + "cm";
     }
 }
