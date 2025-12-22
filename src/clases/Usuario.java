@@ -1,6 +1,7 @@
 package clases;
 
 public class Usuario {
+    //ATRIBUTOS
     private int idNum;
     private int userWeight;
     private int userAge;
@@ -44,7 +45,7 @@ public class Usuario {
 
 
     //Metodos
-        //Constructor
+    // Constructor
     public Usuario(int idNum, String userName, double sex, int userAge, int userWeight, double userHeight, double userWaist, double userHip){
         this.idNum = idNum;
         this.userName = userName;
