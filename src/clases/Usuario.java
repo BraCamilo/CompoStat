@@ -6,7 +6,7 @@ public class Usuario {
     private int userWeight;
     private int userAge;
     private String userName;
-    private double Usersex;
+    private int userSex;
     private double userHeight;
     private double userWaist;
     private double userHip;
@@ -26,8 +26,8 @@ public class Usuario {
     public String getUserName(){
         return userName;
     }
-    public double getUserSex(){
-        return Usersex;
+    public int getUserSex(){
+        return userSex;
     }
     public double getUserHeight(){
         return userHeight;
@@ -46,11 +46,11 @@ public class Usuario {
 
     //Metodos
     // Constructor
-    public Usuario(int idNum, String userName, double sex, int userAge, int userWeight, double userHeight, double userWaist, double userHip){
+    public Usuario(int idNum, String userName, int sex, int userAge, int userWeight, double userHeight, double userWaist, double userHip){
         this.idNum = idNum;
         this.userName = userName;
         this.userAge = userAge;
-        this.Usersex = sex;
+        this.userSex = sex;
         this.userHip = userHip;
         this.userWaist = userWaist;
         this.userWeight = userWeight;
