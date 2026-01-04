@@ -8,8 +8,8 @@ public class Usuario {
     private String userName;
     private int userSex;
     private double userHeight;
-    private double userWaist;
-    private double userHip;
+    /*private double userWaist;
+    private double userHip;*/
 
 
 
@@ -29,15 +29,13 @@ public class Usuario {
     public int getUserSex(){
         return userSex;
     }
-    public double getUserHeight(){
-        return userHeight;
-    }
-    public double getUserWaist(){
+    public double getUserHeight(){return userHeight;}
+   /* public double getUserWaist(){
         return userWaist;
     }
     public double getUserHip(){
         return userHip;
-    }
+    }*/
 
 
     //Setters
@@ -46,18 +44,18 @@ public class Usuario {
 
     //Metodos
     // Constructor
-    public Usuario(int idNum, String userName, int sex, int userAge, int userWeight, double userHeight, double userWaist, double userHip){
+    public Usuario(int idNum, String userName, int sex, int userAge, int userWeight, double userHeight/*, double userWaist, double userHip*/){
         this.idNum = idNum;
         this.userName = userName;
         this.userAge = userAge;
         this.userSex = sex;
-        this.userHip = userHip;
-        this.userWaist = userWaist;
+        /*this.userHip = userHip;*/
+        /*this.userWaist = userWaist;*/
         this.userWeight = userWeight;
         this.userHeight = userHeight;
     }
 
     public String info(){
-        return "\nEl nombre del usuario es: " + getUserName() + "\nSu edad es: " + getUserAge() + "\nSu sexo es: " + getUserSex() + "\nEl peso del usuario es: " + getUserWeight() + "kg" + "\nLa altura del usuario es: " + getUserHeight() + "\nEl diametro de la cintura es: " + getUserWaist() + "cm" + "\nY el diametro de la cadera es: " + getUserHip() + "cm";
+        return "\nEl nombre del usuario es: " + getUserName() + "\nSu edad es: " + getUserAge() + "\nSu sexo es: " + getUserSex() + "\nEl peso del usuario es: " + getUserWeight() + "kg" + "\nLa altura del usuario es: " + getUserHeight()/* + "\nEl diametro de la cintura es: " + getUserWaist() + "cm" + "\nY el diametro de la cadera es: " + getUserHip() + "cm"*/;
     }
 }

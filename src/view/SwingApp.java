@@ -1,27 +1,21 @@
 package view;
 
-
 import clases.Usuario;
 import clases.calculadoraTasaMetabolicaBasal;
 import clases.clculadoraIMC;
-import clases.CalculadoraGrasaCorporal;
-
 import javax.swing.*;
 import java.awt.*;
 
 public class SwingApp extends JFrame {
     private Usuario usuario;
-
-
-
     // Campos para escribir datos
     private JTextField txtId;
     private JTextField txtNombre;
     private JTextField txtEdad;
     private JTextField txtPeso;
     private JTextField txtAltura;
-    private JTextField txtCintura;
-    private JTextField txtCadera;
+    /*private JTextField txtCintura;
+    private JTextField txtCadera;*/
 
     private JRadioButton rbHombre;
     private JRadioButton rbMujer;
@@ -33,7 +27,7 @@ public class SwingApp extends JFrame {
     }
 
     private void configurarVentana() {
-        setTitle("Crear Usuario");
+        setTitle("Calculadora CompoStat");
         setSize(500, 500);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -46,8 +40,8 @@ public class SwingApp extends JFrame {
         txtEdad = new JTextField();
         txtPeso = new JTextField();
         txtAltura = new JTextField();
-        txtCintura = new JTextField();
-        txtCadera = new JTextField();
+        /*txtCintura = new JTextField();
+        txtCadera = new JTextField();*/
 
         rbHombre = new JRadioButton("Hombre");
         rbMujer = new JRadioButton("Mujer");
@@ -59,26 +53,26 @@ public class SwingApp extends JFrame {
         // 🔹 Panel del formulario (labels + campos)
         JPanel panelFormulario = new JPanel(new GridLayout(7, 2, 5, 5));
 
-        panelFormulario.add(new JLabel("ID:"));
+        panelFormulario.add(new JLabel("ID (numero entero):"));
         panelFormulario.add(txtId);
 
-        panelFormulario.add(new JLabel("Nombre:"));
+        panelFormulario.add(new JLabel("Nombre (solo texto):"));
         panelFormulario.add(txtNombre);
 
-        panelFormulario.add(new JLabel("Edad:"));
+        panelFormulario.add(new JLabel("Edad (numero entero):"));
         panelFormulario.add(txtEdad);
 
-        panelFormulario.add(new JLabel("Peso (kg):"));
+        panelFormulario.add(new JLabel("Peso (kg) (numero entero):"));
         panelFormulario.add(txtPeso);
 
-        panelFormulario.add(new JLabel("Altura (m):"));
+        panelFormulario.add(new JLabel("Altura (m) (numero decimal con punto):"));
         panelFormulario.add(txtAltura);
 
-        panelFormulario.add(new JLabel("Cintura (cm):"));
+        /*panelFormulario.add(new JLabel("Cintura (cm):"));
         panelFormulario.add(txtCintura);
 
         panelFormulario.add(new JLabel("Cadera (cm):"));
-        panelFormulario.add(txtCadera);
+        panelFormulario.add(txtCadera);*/
 
         // 🔹 Panel del sexo
         JPanel panelSexo = new JPanel(new FlowLayout());
@@ -138,13 +132,13 @@ public class SwingApp extends JFrame {
             int edad = Integer.parseInt(txtEdad.getText());
             int peso = Integer.parseInt(txtPeso.getText());
             double altura = Double.parseDouble(txtAltura.getText());
-            double cintura = Double.parseDouble(txtCintura.getText());
-            double cadera = Double.parseDouble(txtCadera.getText());
+            /*double cintura = Double.parseDouble(txtCintura.getText());
+            double cadera = Double.parseDouble(txtCadera.getText());*/
 
             int sexo = rbMujer.isSelected() ? 0 : 1;
 
             // 🔥 AQUÍ SE LLAMA A TU CONSTRUCTOR 🔥
-            usuario = new Usuario(id, nombre, sexo, edad, peso, altura, cintura, cadera);
+            usuario = new Usuario(id, nombre, sexo, edad, peso, altura/*, cintura, cadera*/);
 
             JOptionPane.showMessageDialog(this,
                     "Usuario creado correctamente:\n" + usuario.info());

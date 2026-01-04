@@ -1,9 +1,5 @@
 package Main;
 
-import clases.Usuario;
-import clases.clculadoraIMC;
-import clases.CalculadoraGrasaCorporal;
-import clases.calculadoraTasaMetabolicaBasal;
 import view.SwingApp;
 
 public class main {
